@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BOITUTOR</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      position: relative;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('boit.jpg') no-repeat center center fixed;
+      background-size: cover;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4a90e2;
+    }
+
+    .subjects ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .subjects li {
+      background-color: #fff;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .pricing-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 280px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .pricing-card h3 {
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .pricing-card p {
+      margin: 10px 0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      margin: auto;
+      max-width: none;
+    }
+
+    form input,
+    form select,
+    form button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    form select {
+      background-color: #fff;
+      color: #333;
+    }
+
+    form button {
+      background: linear-gradient(to right, #4a90e2, #357ab8);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    form button:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(to right, #357ab8, #2c5ea9);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    }
+
+    .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid white;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      animation: spin 1s linear infinite;
+      display: none;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BOITUTOR</h1>
+    <nav>
+      <a href="#subjects">Subjects</a>
+      <a href="#packages">Packages</a>
+      <a href="#contact">Contact</a>
+      <a href="#location">Location</a>
+    </nav>
+  </header>
+
+  <section id="subjects" class="subjects">
+    
+    <h2>Subjects & Services</h2>
+    <ul>
+      <li>Mathematics</li>
+      <li>Physical Sciences</li>
+      <li>Life Sciences</li>
+      <li>Geography</li>
+      <li>Accounting</li>
+      <li>English</li>
+      <li>Homework Assistance</li>
+      <li>School Projects</li>
+      <li>Study Prep</li>
+    </ul>
+  </section>
+
+  <section id="packages">
+    <h2>Lesson Packages</h2>
+    <p style="text-align: center; margin-bottom: 30px; font-style: italic;">
+        All lessons are available from Monday to Thursday.
+      </p>
+      
+    <div class="pricing-table">
+      <div class="pricing-card">
+        <h3>Homework Help</h3>
+        <p>R120/week</p>
+        <p>1 hour sessions (x2)</p>
+        <p>Assistance with weekly homework</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Project Support</h3>
+        <p>R200/project</p>
+        <p>Help with research & building</p>
+        <p>Guidance, design, editing</p>
+      </div>
+      <div class="pricing-card">
+        <h3>Full Subject Tutoring</h3>
+        <p>R350/month</p>
+        <p>2–3 sessions/week</p>
+        <p>For full-term tutoring in any subject</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Book a Session</h2>
+    <form action="https://formspree.io/f/xvgkydga" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="contact" name="contact" placeholder="Your whatsapp numbers" required />
+      
+      <select name="subject" required>
+
+        <option value="">Select Subject/Service</option>
+        <option value="Mathematics">Mathematics</option>
+        <option value="Physical Sciences">Physical Sciences</option>
+        <option value="Life Sciences">Life Sciences</option>
+        <option value="Geography">Geography</option>
+        <option value="Accounting">Accounting</option>
+        <option value="English">English</option>
+        <option value="Homework Assistance">Homework Assistance</option>
+        <option value="School Projects">School Projects</option>
+      </select>
+
+      <textarea name="message" rows="4" placeholder="Let us know what you need..." required></textarea>
+      <button type="submit">Send Message <span class="spinner"></span></button>
+    </form>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <p><strong>Contact Us:</strong></p>
+      <ul style="list-style-type: none; padding: 0;">
+        <li><strong>Cell:</strong> +27 69 214 2837</li>
+        <li><strong>Alternative Contact:</strong> +27 69 214 2837</li>
+        <li><strong>Email:</strong> <a href="mailto:DUDUZILENKOSI099@GMAIL.COM">DUDUZILENKOSI099@GMAIL.COM</a></li>
+      </ul>
+      <a href="https://wa.me/27692142837" class="whatsapp-btn" target="_blank">Chat with us on WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="location">
+    <h2>Our Location</h2>
+    <p style="text-align: center;">Serving students in Rustenburg and Phokeng</p>
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d89252.26263704866!2d27.070490037786755!3d-25.641319207316683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebedb71c9e1cb71%3A0x85e4f7b0b118e82c!2sPhokeng%2C%20Rustenburg!5e0!3m2!1sen!2sza!4v1713178707749!5m2!1sen!2sza" 
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>Made with ❤️ by @sebogodiphenyo7@gmail.com</p>
+    <p>&copy; 2025 Phenyo Tutoring. All rights reserved.</p>
+    <p>Contact us on <a href="https://wa.me/27692142837" style="color: white;">WhatsApp</a></p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    const button = form.querySelector("button");
+    const spinner = button.querySelector(".spinner");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      spinner.style.display = "inline-block";
+      button.disabled = true;
+      button.style.opacity = 0.7;
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          form.innerHTML = `
+            <h3 style="text-align: center; color: #4a90e2;">Thank you! 🎉</h3>
+            <p style="text-align: center;">Your booking request has been received. We'll get back to you shortly via email or WhatsApp.</p>
+          `;
+        } else {
+          alert("Oops! Something went wrong. Please try again later.");
+          spinner.style.display = "none";
+          button.disabled = false;
+          button.style.opacity = 1;
+        }
+      } catch (error) {
+        alert("Network error. Please try again.");
+        spinner.style.display = "none";
+        button.disabled = false;
+        button.style.opacity = 1;
+      }
+    });
+  </script>
+</body>
+</html>
